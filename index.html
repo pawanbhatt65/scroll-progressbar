@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical scroll progress bar</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@100;300&display=swap");
+
+      body {
+        background-color: #333;
+        font-family: "Press Start 2P", cursive;
+        margin: 0;
+        padding: 0;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-y: scroll;
+      }
+
+      body::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+      }
+
+      .header h2 {
+        text-align: center;
+      }
+
+      .progress-container {
+        position: fixed;
+        right: 10px;
+        width: 8px;
+        height: 90%;
+        background: #222;
+        border-radius: 2px;
+        margin: auto;
+      }
+
+      .progress-bar {
+        width: 8px;
+        background: #d4b255;
+        border-radius: 2px;
+      }
+
+      .progress-bar:before {
+        height: 1%;
+      }
+
+      .glow {
+        -webkit-box-shadow: 0px 0px 14px 21px rgba(212, 178, 85, 0.48);
+        -moz-box-shadow: 0px 0px 14px 21px rgba(212, 178, 85, 0.48);
+        box-shadow: 0px 0px 14px 21px rgba(212, 178, 85, 0.48);
+      }
+
+      .wrapper {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      section {
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+      }
+
+      h2 {
+        color: #f1f1f1;
+      }
+
+      img {
+        width: 20%;
+      }
+      .box-container {
+        height: 300vh;
+        background-color: red;
+      }
+      .box-blank {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-container">
+      <div id="progressbar" class="progress-bar"></div>
+    </div>
+
+    <div class="wrapper">
+      <section>
+        <h2>Scroll down</h2>
+      </section>
+      <section>
+        <h2>...keep going...</h2>
+      </section>
+      <section>
+        <h2>Almost there...</h2>
+      </section>
+      <section>
+        <h2>I can't believe you've done this.</h2>
+        <br />
+        <br />
+        <img
+          src="https://images.unsplash.com/photo-1519068737630-e5db30e12e42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+          alt=""
+        />
+      </section>
+    </div>
+
+    <div class="box-container">
+      <pre>
+            hai
+            hadsdk
+            hskl
+            slk
+            weiowi
+            nzm,
+            sdjk
+        </pre
+      >
+    </div>
+    <div class="box-blank"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
